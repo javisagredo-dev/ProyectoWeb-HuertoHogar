@@ -1,4 +1,3 @@
-/* Navbar con colores peronalizados */
 
 nav.navbar {
   background-color: #656d4a;
@@ -12,4 +11,25 @@ nav.navbar .navbar-brand {
   font-size: 1.5rem;
   color: #fff;
   letter-spacing: 1px;
+}
+
+.carousel-item img {
+  max-height: 700px;
+  object-fit: cover;
+}
+
+html, body {
+  height: 100%;
+}
+
+body{
+  background-color: #EDE0D4;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #6A462D;
+  margin-top: auto;
+  color: #fff;
 }
