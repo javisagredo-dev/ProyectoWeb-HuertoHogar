@@ -1,0 +1,15 @@
+/* Navbar con colores peronalizados */
+
+nav.navbar {
+  background-color: #656d4a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav.navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
