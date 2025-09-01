@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "ProyectoWeb-HuertoHogar",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ProyectoWeb-HuertoHogar",
+		"liveServer.settings.port": 5501
+	}
+}
