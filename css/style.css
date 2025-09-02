@@ -29,23 +29,28 @@
 }
 
 nav.navbar {
-  background-color: #656d4a;
+  background-color: #5e6641;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 0.8rem 1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav.navbar .navbar-brand {
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #fff;
-  letter-spacing: 1px;
-}
 
+.offcanvas{
+  background-color: #5e6641;
+  color: white;
+  
+}
 .carousel-item img {
   max-height: 700px;
   object-fit: cover;
 }
+nav .nav-link{
+  color: white;
+  font-weight: 300;
+}
+
+
 
 html,
 body {
@@ -82,6 +87,7 @@ body {
 .texto-P-Negro {
   color: #373b2f;
 }
+
 footer {
   display: flexbox;
 }
