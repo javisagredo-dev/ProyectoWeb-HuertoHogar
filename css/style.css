@@ -1,12 +1,11 @@
 .form-control:focus {
-  border-color: #6A462D;
-  box-shadow: 0 0 0 0.2rem #95A76F;
+  border-color: #6a462d;
+  box-shadow: 0 0 0 0.2rem #95a76f;
 }
 
-
 .btn-success {
-  background-color: #95A76F;
-  border-color: #95A76F;
+  background-color: #95a76f;
+  border-color: #95a76f;
 }
 
 .btn-success:hover {
@@ -23,13 +22,11 @@
   box-shadow: none;
 }
 
-
 .card {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 nav.navbar {
   background-color: #656d4a;
@@ -56,19 +53,17 @@ body {
 }
 
 body {
-  background-color: #EDE0D4;
+  /* background-color: #ede0d4; */
+  background: url("../img/textura_papel.jpg");
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
 }
 
-
-
-
 .captionTCarousel {
   color: #ffffff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -76,17 +71,71 @@ body {
 
 .captionPCarousel {
   color: #ffffff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.texto-T-Negro{
-  color: #373B2F;
+.texto-T-Negro {
+  color: #373b2f;
 }
-.texto-P-Negro{
-  color: #373B2F;
+.texto-P-Negro {
+  color: #373b2f;
 }
-footer{
+footer {
   display: flexbox;
+}
+
+/* ===== LOGIN SPLIT SCREEN ===== */
+
+.left-panel {
+  background: url("../img/Fondo.jpg") no-repeat center center;
+  background-size: cover;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.left-panel h2 {
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.left-panel p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.right-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 600px;
+  background-color: #eeeeee;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h3 {
+  color: #6a462d;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.login-box a {
+  color: #6a462d;
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
 }
