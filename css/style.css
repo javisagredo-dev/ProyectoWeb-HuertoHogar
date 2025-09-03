@@ -22,11 +22,7 @@
   box-shadow: none;
 }
 
-.card {
-  background-color: #eeeeee;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+
 
 nav.navbar {
   background-color: #5e6641;
