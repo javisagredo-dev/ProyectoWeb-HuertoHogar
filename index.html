@@ -4,18 +4,21 @@
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>HuertoHogar</title>
+   <title> HuertoHogar </title>
    <link rel="stylesheet" href="assets/bootstrap.min.css" />
-   <!-- link para css personalizado -->
    <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="css/style-navbar.css" />
+   <link rel="stylesheet" href="css/style-index.css" />
+   <link rel="stylesheet" href="css/style-footer.css" />
 </head>
 
 <body>
+   <!-- NAVBAR -->
    <header>
       <nav class="navbar navbar-expand-lg fixed-top">
          <div class="container-fluid">
             <a class="navbar-brand" href="index.html"> <img pad src="img/LogoProvisorio.png"
-                  style="width: 80px; height: 80px; margin-left: 50px;" alt="LogoHuertoHogar"> </a>
+                  style="width: 60px; height: 60px; margin-left: 50px" alt="LogoHuertoHogar"> </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -86,7 +89,7 @@
             </div>
          </div>
 
-         <!-- Botones para carrusel -->
+         <!-- Botones carrusel -->
          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -99,7 +102,8 @@
          </button>
       </div>
    </div>
-   <!-- Acerca de ... -->
+
+   <!-- Seccion texto chido con plantas -->
    <div class="container">
       <div class="row">
 
@@ -127,31 +131,21 @@
       </div>
    </div>
 
-   <!-- Footer -->
-   <footer>
-      <div class="container-fluid  p-5 text-center mt-5" style="background-color: #6A462D;">
-         <div class="row">
-            <div class="col-ms-12 col-md-4">
-               <a href="#" class="text-decoration-none text-light"> Servicio al ciente </a>
-               <br>
-               <br>
-               <a href="#" class="text-decoration-none text-light"> footer1 </a>
-               <br>
-               <br>
-               <a href="#" class="text-decoration-none text-light"> footer2 </a>
-            </div>
-            <div class="col-ms-12 col-md-4"> <img src="img/LogoProvisorio.png" style="width: 80px; height: 80px;"
-                  alt="LogoHuertoHogar"></div>
-            <div class="col-ms-12 col-md-4">
-               <a href="contacto.html" class="text-decoration-none text-light"> Contactanos </a>
-               <br>
-               <br>
-               <a href="#" class="text-decoration-none text-light"> footer3 </a>
-               <br>
-               <br>
-               <a href="#" class="text-decoration-none text-light"> footer4 </a>
-            </div>
-
+   <!--  FOOTER  -->
+   <footer class="custom-footer">
+      <div class="footer-content">
+         <div class="footer-links-left">
+            <a href="#">Servicio al cliente</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="tienda.html">Tienda</a>
+         </div>
+         <div class="footer-center">
+            <img src="img/LogoProvisorio.png" class="footer-logo" alt="LogoHuertoHogar">
+         </div>
+         <div class="footer-links-right">
+            <a href="contacto.html">Contacto</a>
+            <a href="anuncio.html">Anuncios</a>
+            <a href="login.html">Cuenta</a>
          </div>
       </div>
    </footer>

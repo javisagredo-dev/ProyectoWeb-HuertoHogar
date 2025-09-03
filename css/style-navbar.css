@@ -1,0 +1,27 @@
+/* ===== NAVBAR STYLES ===== */
+
+nav.navbar {
+  background-color: #5e6641;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.3rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  min-height: auto;
+}
+
+.navbar-brand {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.offcanvas {
+  background-color: #5e6641;
+  color: white;
+}
+
+nav .nav-link {
+  color: white;
+  font-weight: 300;
+}

@@ -1,0 +1,31 @@
+/*  INDEX STYLE  */
+
+/* Carrusel */
+.carousel-item img {
+  max-height: 700px;
+  object-fit: cover;
+}
+
+.captionTCarousel {
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.captionPCarousel {
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.texto-T-Negro {
+  color: #373b2f;
+}
+
+.texto-P-Negro {
+  color: #373b2f;
+}

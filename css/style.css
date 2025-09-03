@@ -1,8 +1,26 @@
+/*  STYLES  GLOBALES */
+
+/* Base HTML y Body */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: url("../img/textura_papel.jpg");
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* style de formularo  */
 .form-control:focus {
   border-color: #6a462d;
   box-shadow: 0 0 0 0.2rem #95a76f;
 }
 
+/* button global */
 .btn-success {
   background-color: #95a76f;
   border-color: #95a76f;
@@ -22,64 +40,7 @@
   box-shadow: none;
 }
 
-
-
-nav.navbar {
-  background-color: #5e6641;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 0.8rem 1rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.offcanvas {
-  background-color: #5e6641;
-  color: white;
-}
-.carousel-item img {
-  max-height: 700px;
-  object-fit: cover;
-}
-nav .nav-link {
-  color: white;
-  font-weight: 300;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  /* background-color: #ede0d4; */
-  background: url("../img/textura_papel.jpg");
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
-
-.captionTCarousel {
-  color: #ffffff;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.captionPCarousel {
-  color: #ffffff;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.texto-T-Negro {
-  color: #373b2f;
-}
-.texto-P-Negro {
-  color: #373b2f;
-}
-
+/* Footer base */
 footer {
   display: flexbox;
 }

@@ -1,10 +1,13 @@
+/*  CARD STYLES  */
+
+/* Tarjeta principal */
 .card {
   background-color: rgba(207, 207, 207, 0.63);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Carta grande responsiva */
+/* Card grande responsiva */
 @media (max-width: 768px) {
   body {
     padding-top: 130px;
@@ -25,13 +28,13 @@
   }
 }
 
+/* Cards de productos */
 .cards {
   background-color: rgba(207, 207, 207, 0.63);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: justify;
   padding: 6%;
-
 }
 
 .cards-img-top {
@@ -47,7 +50,7 @@
   .cards {
     max-width: 90%;
     margin: 0 auto;
-    
+
   }
 
   .cards-body {
