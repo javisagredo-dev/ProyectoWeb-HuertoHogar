@@ -31,22 +31,18 @@ nav.navbar {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-.offcanvas{
+.offcanvas {
   background-color: #5e6641;
   color: white;
-  
 }
 .carousel-item img {
   max-height: 700px;
   object-fit: cover;
 }
-nav .nav-link{
+nav .nav-link {
   color: white;
   font-weight: 300;
 }
-
-
 
 html,
 body {
@@ -86,58 +82,4 @@ body {
 
 footer {
   display: flexbox;
-}
-
-/* ===== LOGIN SPLIT SCREEN ===== */
-
-.left-panel {
-  background: url("../img/Fondo.jpg") no-repeat center center;
-  background-size: cover;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 3rem;
-}
-
-.left-panel h2 {
-  font-weight: bold;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.left-panel p {
-  font-size: 1.1rem;
-  margin-top: 1rem;
-}
-
-.right-panel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
-}
-
-.login-box {
-  width: 100%;
-  max-width: 600px;
-  background-color: #eeeeee;
-  border-radius: 12px;
-  padding: 3rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.login-box h3 {
-  color: #6a462d;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.login-box a {
-  color: #6a462d;
-  text-decoration: none;
-}
-
-.login-box a:hover {
-  text-decoration: underline;
 }
