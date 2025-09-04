@@ -1,101 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear cuenta</title>
+    <link rel="stylesheet" href="assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login-style.css" />
+    <link rel="stylesheet" href="css/style-card.css" />
+    <link rel="stylesheet" href="css/style-navbar.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crear cuenta</title>
-  <link rel="stylesheet" href="assets/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/login-style.css" />
-  <link rel="stylesheet" href="css/style-card.css" />
-  <link rel="stylesheet" href="css/style-navbar.css" />
-</head>
-
-<body>
-  <!-- NAVBAR -->
-  <header>
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img pad src="img/LogoProvisorio.png" style="width: 60px; height: 60px; margin-left: 50px"
-            alt="LogoHuertoHogar" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <img pad src="img/LogoProvisorio.png" style="width: 90px; height: 90px" alt="LogoHuertoHogar" />
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link" href="nosotros.html">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="tienda.html">Tienda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="anuncio.html">Anuncio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Cuenta</a>
-              </li>
-            </ul>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img
+              pad
+              src="img/LogoProvisorio.png"
+              style="width: 60px; height: 60px; margin-left: 50px"
+              alt="LogoHuertoHogar"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <img
+                  pad
+                  src="img/LogoProvisorio.png"
+                  style="width: 90px; height: 90px"
+                  alt="LogoHuertoHogar"
+                />
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tienda.html">Tienda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="anuncio.html">Anuncio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Cuenta</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-  </header>
-  <div class="container-fluid h-100">
-    <div class="row h-100">
-      <!-- Panel izquierdo con imagen -->
-      <div class="col-md-6 left-panel">
-        <h2>¡Bienvenido a HuertoHogar!</h2>
-        <p>
-          Regístrate para comenzar a disfrutar de todos nuestros beneficios.
-        </p>
-      </div>
+      </nav>
+    </header>
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <!-- Panel izquierdo con imagen -->
+        <div class="col-md-6 left-panel">
+          <h2>¡Bienvenido a HuertoHogar!</h2>
+          <p>
+            Regístrate para comenzar a disfrutar de todos nuestros beneficios.
+          </p>
+        </div>
 
-      <!-- Panel derecho con formulario -->
-      <div class="col-md-6 right-panel">
-        <div class="login-box">
-          <h3 class="card-title text-center mb-4">Crear cuenta</h3>
-          <form>
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" />
-            </div>
-            <div class="mb-3">
-              <label for="apellido" class="form-label">Apellido</label>
-              <input type="text" class="form-control" id="apellido" placeholder="Ingresa tu apellido" />
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Correo electrónico</label>
-              <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo" />
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" />
-            </div>
-            <button type="submit" class="btn btn-success w-100">
-              Registrarse
-            </button>
-          </form>
+        <!-- Panel derecho con formulario -->
+        <div class="col-md-6 right-panel">
+          <div class="login-box">
+            <h3 class="card-title text-center mb-4">Crear cuenta</h3>
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  placeholder="Ingresa tu nombre"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apellido"
+                  placeholder="Ingresa tu apellido"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Ingresa tu correo"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Ingresa tu contraseña"
+                />
+              </div>
+              <button type="submit" class="btn btn-success w-100">
+                Registrarse
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="assets/bootstrap.bundle.min.js"></script>
-</body>
-
+    <script src="assets/bootstrap.bundle.min.js"></script>
+    <script src="js/cuenta-validation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
 </html>
