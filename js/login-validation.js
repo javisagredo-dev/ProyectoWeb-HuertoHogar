@@ -55,6 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // Si no hay errores → limpiar mensajes previos
       clearErrors();
       // Simulación de login válido
+      // Necesito agregar sweet alert a un modal para que no use espacio
+      // de la pagina principal !!!
       Swal.fire({
         icon: "success",
         title: "¡Éxito!",
