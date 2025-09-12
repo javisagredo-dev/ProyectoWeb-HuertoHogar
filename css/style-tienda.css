@@ -1,0 +1,116 @@
+/* ===== ESTILOS TIENDA ONLINE ===== */
+
+/* === SECCIÓN HERO/BANNER === */
+.hero-banner {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-subtitle {
+  opacity: 0.7;
+}
+
+/* === PANEL LATERAL (CATEGORÍAS Y FILTROS) === */
+.sidebar-panel {
+  border-radius: 0;
+  background-color: #a8c47a !important;
+}
+
+.category-title {
+  cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  .sidebar-full-height {
+    min-height: calc(100vh - 75px);
+  }
+}
+
+/* === SECCIÓN DE PRODUCTOS === */
+.product-card {
+  width: 180px; /* Tamaño fijo de cada card */
+  flex: 0 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  height: 200px;
+  object-fit: contain;
+}
+
+.product-overlay {
+  background: rgba(0,0,0,0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+/* === RESPONSIVIDAD === */
+@media (max-width: 767px) {
+  .sidebar-panel {
+    min-height: auto;
+  }
+
+  .product-card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
+  }
+}
+/* ===== MODAL PRODUCTO ===== */
+.modal-producto-img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.modal-producto-nombre {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.modal-producto-codigo {
+  font-size: 0.9rem;
+  color: #6c757d; /* Gris Bootstrap */
+}
+
+.modal-producto-precio {
+  font-size: 1.5rem;
+}
+
+.modal-producto-desc {
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
