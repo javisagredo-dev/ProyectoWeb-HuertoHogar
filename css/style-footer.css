@@ -1,5 +1,7 @@
 /*  FOOTER STYLE  */
-
+footer {
+  display: flexbox;
+}
 .custom-footer {
   background-color: #6A462D;
   padding: 1rem 0;

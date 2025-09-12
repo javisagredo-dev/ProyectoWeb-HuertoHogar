@@ -1,9 +1,20 @@
 /*  INDEX STYLE  */
-
 /* Carrusel */
+.carousel-item {
+  height: 500px; /* altura fija para todas las diapositivas */
+}
+
 .carousel-item img {
-  max-height: 700px;
-  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* recorta y ajusta sin deformar */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 30%;
+  transform: translateY(-50%);
+  height: auto;        
 }
 
 .captionTCarousel {
@@ -12,6 +23,7 @@
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8); 
 }
 
 .captionPCarousel {
@@ -20,6 +32,7 @@
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.75);
 }
 
 .texto-T-Negro {
