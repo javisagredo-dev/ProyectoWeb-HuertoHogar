@@ -1,11 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - HuertoHogar</title>
+    <link rel="stylesheet" href="assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-navbar.css" />
+    <link rel="stylesheet" href="css/contacto-style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="img/LogoProvisorio.png"
+              style="width: 60px; height: 60px; margin-left: 50px"
+              alt="LogoHuertoHogar"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <img
+                  src="img/LogoProvisorio.png"
+                  style="width: 90px; height: 90px"
+                  alt="LogoHuertoHogar"
+                />
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tienda.html">Tienda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="carrito.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="anuncio.html">Anuncio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Cuenta</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- CONTACT FORM -->
+    <div class="container mt-5 pt-5">
+      <h2 class="text-center mb-4">Contáctanos</h2>
+      <p class="text-center mb-5">
+        Déjanos tu mensaje y te responderemos lo antes posible 🌱
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                placeholder="Tu nombre"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="tuemail@gmail.com"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea
+                class="form-control"
+                id="mensaje"
+                rows="5"
+                placeholder="Escribe tu mensaje aquí..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/contacto-validation.js"></script>
+  </body>
 </html>
+<!-- version 1 -->
