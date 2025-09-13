@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carrito</title>
-  <link rel="stylesheet" href="assets/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/style-navbar.css" />
-  <link rel="stylesheet" href="css/style-card.css" />
-  <link rel="stylesheet" href="css/style-footer.css" />
-  <link rel="stylesheet" href="css/style-tienda.css" />
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Carrito</title>
+   <link rel="stylesheet" href="assets/bootstrap.min.css" />
+   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="css/style-navbar.css" />
+   <link rel="stylesheet" href="css/style-card.css" />
+   <link rel="stylesheet" href="css/style-footer.css" />
+   <link rel="stylesheet" href="css/style-tienda.css" />
 </head>
 
-<body style="padding-top: 75px;">
-  <!-- NAVBAR -->
+<body style="padding-top: 75px;" onload="cargarCarrito()">
+   <!-- NAVBAR -->
    <header></header>
    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
@@ -30,7 +30,7 @@
          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                  <img  src="img/LogoProvisorio.png" style="width: 110px; height: 70px;" alt="LogoHuertoHogar" />
+                  <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px;" alt="LogoHuertoHogar" />
                </h5>
                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
@@ -48,9 +48,14 @@
       </div>
    </nav>
 
+   <main>
+      <h1 class="mt-5">Carrito de Compras</h1>
+      <div id="contenedor-carrito"></div>
+   </main>
 
 
-  <!--  FOOTER  -->
+
+   <!--  FOOTER  -->
    <footer class="custom-footer">
       <div class="footer-content">
          <div class="footer-links-left">
@@ -59,7 +64,8 @@
             <a href="tienda.html">Tienda</a>
          </div>
          <div class="footer-center">
-            <img src="img/LogoProvisorio.png" class="footer-logo" style="width: 110px; height: 70px; "alt="LogoHuertoHogar">
+            <img src="img/LogoProvisorio.png" class="footer-logo" style="width: 110px; height: 70px; "
+               alt="LogoHuertoHogar">
          </div>
          <div class="footer-links-right">
             <a href="contacto.html">Contacto</a>
@@ -69,9 +75,56 @@
       </div>
    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+   <script>
+      function cargarCarrito() {
+         const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+         const contenedor = document.getElementById("contenedor-carrito");
+         contenedor.innerHTML = ""; // limpiar antes de agregar
+
+         let totalGeneral = 0;
+
+         carrito.forEach((producto, index) => {
+            const productoDiv = document.createElement("div");
+            productoDiv.style.border = "1px solid #ccc";
+            productoDiv.style.padding = "10px";
+            productoDiv.style.margin = "5px 0";
+
+            productoDiv.innerHTML = `
+                    <p><strong>ID:</strong> ${producto.id}</p>
+                    <p><strong>Nombre:</strong> ${producto.nombre}</p>
+                    <p><strong>Cantidad:</strong> ${producto.cantidad}</p>
+                    <p><strong>Total Producto:</strong> $${producto.total.toLocaleString()} CLP</p>
+                    <img src="${producto.imagen}" alt="${producto.nombre}" width="100">
+                    <br>
+                    <button onclick="eliminarProducto(${index})">Eliminar</button>
+                `;
+
+            contenedor.appendChild(productoDiv);
+            totalGeneral += producto.total;
+         });
+
+         // Mostrar total general al final
+         const totalDiv = document.createElement("div");
+         totalDiv.style.marginTop = "20px";
+         totalDiv.innerHTML = `<h3>Total General: $${totalGeneral.toLocaleString()} CLP</h3>`;
+         contenedor.appendChild(totalDiv);
+      }
+
+      function eliminarProducto(indice) {
+         let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+         carrito.splice(indice, 1);
+         localStorage.setItem("carrito", JSON.stringify(carrito));
+
+         // Actualizar la cantidad en el navbar
+         const totalItems = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+         const badge = document.getElementById("cantidad-carrito");
+         if (badge) badge.textContent = totalItems;
+         cargarCarrito();
+      }
+   </script>
 </body>
 
 </html>

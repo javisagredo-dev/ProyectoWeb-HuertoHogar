@@ -19,26 +19,21 @@
       <div class="modal-body">
         <div class="row">
 
-          <!-- Imagen  -->
+          <!-- IMAGEN  -->
           <div class="col-md-6">
-            <img src="img/manzanas_fuji.jpg" class="img-fluid modal-producto-img" alt="manzanas_fuji">
+            <img src=# class="img-fluid modal-producto-img" alt="modal-producto-img">
           </div>
 
-          <!-- Información del producto -->
+          <!-- DATOS PRODUCTO -->
           <div class="col-md-6">
-            <h3 class="modal-producto-nombre">Manzanas Fuji</h3>
-            <p class="text-muted small modal-producto-codigo">Código: #FR001</p>
-            <p class="text-success fw-bold modal-producto-precio">$1.200 CLP/kg</p>
-            <button class="btn btn-success mb-3">
+            <h3 class="modal-producto-nombre">Nombre</h3>
+            <p class="text-muted small modal-producto-codigo"> Codigo</p>
+            <p class="text-success fw-bold modal-producto-precio">Precio</p>
+            <button class="btn btn-success mb-3 btn-agregar-carrito" data-id="id">
               Agregar al carrito
               <img src="img/addToCart.png" alt="IconoCarrito" style="width:20px; height:20px;">
             </button>
-
-            <p class="modal-producto-desc">
-              Manzanas Fuji crujientes y dulces, cultivadas en el Valle del Maule.
-              Perfectas para meriendas saludables o como ingrediente en postres. Estas manzanas
-              son conocidas por su textura firme y su sabor equilibrado entre dulce y ácido.
-            </p>
+            <p class="modal-producto-desc">Descripcion</p>
           </div>
         </div>
       </div>
@@ -46,44 +41,46 @@
   </div>
 </div>
 
-<body style="padding-top: 75px;">
+<body style="padding-top: 75px;" onload="actualizarCantidadNavBar()">
   <!-- NAVBAR -->
-   <header></header>
-   <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
-         <a class="navbar-brand" href="index.html">
-            <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px; margin-left: 20px;"
-               alt="LogoHuertoHogar" />
-         </a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
+  <header></header>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px; margin-left: 20px;"
+          alt="LogoHuertoHogar" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                  <img  src="img/LogoProvisorio.png" style="width: 110px; height: 70px;" alt="LogoHuertoHogar" />
-               </h5>
-               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body ">
-               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                  <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
-                  <li class="nav-item"><a class="nav-link" href="anuncio.html">Anuncio</a></li>
-                  <li class="nav-item"><a class="nav-link" href="login.html">Cuenta</a></li>
-                  <li class="nav-item"><a class="nav-link" href="carrito.html"><img src="img/shoppingCart.png"
-                           alt="LinkCarrito"></a></li>
-               </ul>
-            </div>
-         </div>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px;" alt="LogoHuertoHogar" />
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body ">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+            <li class="nav-item"><a class="nav-link" href="anuncio.html">Anuncio</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Cuenta</a></li>
+            <li class="nav-item"><a class="nav-link" href="carrito.html">
+                <img src="img/shoppingCart.png" alt="LinkCarrito">
+                <span id="cantidad-carrito" class="badge bg-success">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-   </nav>
-
-  <!-- HERO -->
+    </div>
+  </nav>
+  <!-- HERO BANNER-->
   <div class="hero-banner" style="background-image: url(img/img\ \(1\).jpg);">
-    <div class="hero-content">
+    <div class="hero-content mt-5">
       <h3 class="mb-3">TIENDA ONLINE</h3>
       <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua.</p>
@@ -94,23 +91,18 @@
   <!-- SECCIÓN PRINCIPAL -->
   <div class="container-fluid p-0">
     <div class="row g-0">
-
       <!-- SIDEBAR -->
       <div class="col-12 col-md-3 col-lg-2">
         <aside class="bg-light sidebar-panel p-3">
-
-          <!-- Header visible SOLO en móviles -->
           <div class="sidebar-header d-flex d-md-none justify-content-between align-items-center mb-2">
             <strong class="m-0">Categorías</strong>
             <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse"
               data-bs-target="#filterContent" aria-expanded="false" aria-controls="filterContent">▼</button>
           </div>
-
           <div class="collapse d-md-block" id="filterContent">
             <h5 class="mb-2 d-flex justify-content-between align-items-center category-title d-none d-md-flex">
-              <span>Categorías</span>
+              Categorias
             </h5>
-
             <ul>
               <li class="mb-2"><a href="tienda.html" class="text-decoration-none text-dark">Sin filtrar</a></li>
               <li class="mb-2"><a href="tienda-frutas_frescas.html" class="text-decoration-none text-dark">Frutas
@@ -140,15 +132,15 @@
               </div>
               <div
                 class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center product-overlay">
-                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto">
+                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  onclick="abrirModalProducto('FR001')">
                   Ver Producto
                 </button>
-                <a href="#">
-                  <button class="btn btn-success">
-                    Añadir al Carro
-                    <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
-                  </button>
-                </a>
+
+                <button class="btn btn-success" onclick="agregarCarrito('FR001')">
+                  Añadir al Carro
+                  <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
+                </button>
               </div>
             </div>
 
@@ -162,16 +154,15 @@
               </div>
               <div
                 class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center product-overlay">
-                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto">
+                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  onclick="abrirModalProducto('FR002')">
                   Ver Producto
                 </button>
 
-                <a href="#">
-                  <button class="btn btn-success">
-                    Añadir al Carro
-                    <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
-                  </button>
-                </a>
+                <button class="btn btn-success" onclick="agregarCarrito('FR002')">
+                  Añadir al Carro
+                  <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
+                </button>
               </div>
             </div>
 
@@ -184,15 +175,15 @@
               </div>
               <div
                 class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center product-overlay">
-                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto">
+                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  onclick="abrirModalProducto('FR003')">
                   Ver Producto
                 </button>
-                <a href="#">
-                  <button class="btn btn-success">
-                    Añadir al Carro
-                    <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
-                  </button>
-                </a>
+
+                <button class="btn btn-success" onclick="agregarCarrito('FR003')">
+                  Añadir al Carro
+                  <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
+                </button>
               </div>
             </div>
 
@@ -205,15 +196,15 @@
               </div>
               <div
                 class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center product-overlay">
-                  <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto">
-                    Ver Producto
-                  </button>
-                <a href="#">
-                  <button class="btn btn-success">
-                    Añadir al Carro
-                    <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
-                  </button>
-                </a>
+                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  onclick="abrirModalProducto('VR001')">
+                  Ver Producto
+                </button>
+
+                <button class="btn btn-success" onclick="agregarCarrito('VR001')">
+                  Añadir al Carro
+                  <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
+                </button>
               </div>
             </div>
 
@@ -226,19 +217,19 @@
               </div>
               <div
                 class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center product-overlay">
-                  <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto">
-                    Ver Producto
-                  </button>
-                <a href="#">
-                  <button class="btn btn-success">
-                    Añadir al Carro
-                    <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
-                  </button>
-                </a>
+                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  onclick="abrirModalProducto('VR002')">
+                  Ver Producto
+                </button>
+
+                <button class="btn btn-success" onclick="agregarCarrito('VR002')">
+                  Añadir al Carro
+                  <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
+                </button>
               </div>
             </div>
 
-            <!-- Producto 7 -->
+            <!-- Producto 6 -->
             <div class="product-card card">
               <img src="img/pimientos_tricolor.png" class="card-img-top product-image" alt="pimientos_tricolor" />
               <div class="card-body">
@@ -247,19 +238,19 @@
               </div>
               <div
                 class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center product-overlay">
-                  <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto">
-                    Ver Producto
-                  </button>
-                <a href="#">
-                  <button class="btn btn-success">
-                    Añadir al Carro
-                    <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
-                  </button>
-                </a>
+                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  onclick="abrirModalProducto('VR003')">
+                  Ver Producto
+                </button>
+
+                <button class="btn btn-success" onclick="agregarCarrito('VR003')">
+                  Añadir al Carro
+                  <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
+                </button>
               </div>
             </div>
 
-            <!-- Producto 8 -->
+            <!-- Producto 7 -->
             <div class="product-card card">
               <img src="img/miel_organica.png" class="card-img-top product-image" alt="miel_organica" />
               <div class="card-body">
@@ -268,22 +259,19 @@
               </div>
               <div
                 class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center product-overlay">
-                <a href="#">
-                  <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto">
-                    Ver Producto
-                  </button>
+                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  onclick="abrirModalProducto('PO001')">
+                  Ver Producto
+                </button>
 
-                </a>
-                <a href="#">
-                  <button class="btn btn-success">
-                    Añadir al Carro
-                    <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
-                  </button>
-                </a>
+                <button class="btn btn-success" onclick="agregarCarrito('PO001')">
+                  Añadir al Carro
+                  <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
+                </button>
               </div>
             </div>
 
-            <!-- Producto 9 -->
+            <!-- Producto 8 -->
             <div class="product-card card">
               <img src="img/tomates.png" class="card-img-top product-image" alt="tomates" />
               <div class="card-body">
@@ -292,19 +280,19 @@
               </div>
               <div
                 class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center product-overlay">
-                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto">
+                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  onclick="abrirModalProducto('FR004')">
                   Ver Producto
                 </button>
-                <a href="#">
-                  <button class="btn btn-success">
-                    Añadir al Carro
-                    <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
-                  </button>
-                </a>
+
+                <button class="btn btn-success" onclick="agregarCarrito('FR004')">
+                  Añadir al Carro
+                  <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
+                </button>
               </div>
             </div>
 
-            <!-- Producto 10 -->
+            <!-- Producto 9-->
             <div class="product-card card">
               <img src="img/quinoa_organica.png" class="card-img-top product-image" alt="quinoa_organica" />
               <div class="card-body">
@@ -313,19 +301,19 @@
               </div>
               <div
                 class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center product-overlay">
-                  <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto">
-                    Ver Producto
-                  </button>
-                <a href="#">
-                  <button class="btn btn-success">
-                    Añadir al Carro
-                    <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
-                  </button>
-                </a>
+                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  onclick="abrirModalProducto('PO002')">
+                  Ver Producto
+                </button>
+
+                <button class="btn btn-success" onclick="agregarCarrito('PO002')">
+                  Añadir al Carro
+                  <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
+                </button>
               </div>
             </div>
 
-            <!-- Producto 11 -->
+            <!-- Producto 10 -->
             <div class="product-card card">
               <img src="img/leche_entera.png" class="card-img-top product-image" alt="leche_entera" />
               <div class="card-body">
@@ -334,15 +322,15 @@
               </div>
               <div
                 class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center product-overlay">
-                  <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto">
-                    Ver Producto
-                  </button>
-                <a href="#">
-                  <button class="btn btn-success">
-                    Añadir al Carro
-                    <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
-                  </button>
-                </a>
+                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  onclick="abrirModalProducto('PL001')">
+                  Ver Producto
+                </button>
+
+                <button class="btn btn-success" onclick="agregarCarrito('PL001')">
+                  Añadir al Carro
+                  <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
+                </button>
               </div>
             </div>
 
@@ -354,27 +342,29 @@
   </div>
 
   <!--  FOOTER  -->
-   <footer class="custom-footer">
-      <div class="footer-content">
-         <div class="footer-links-left">
-            <a href="#">Servicio al cliente</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="tienda.html">Tienda</a>
-         </div>
-         <div class="footer-center">
-            <img src="img/LogoProvisorio.png" class="footer-logo" style="width: 110px; height: 70px; "alt="LogoHuertoHogar">
-         </div>
-         <div class="footer-links-right">
-            <a href="contacto.html">Contacto</a>
-            <a href="anuncio.html">Anuncios</a>
-            <a href="login.html">Cuenta</a>
-         </div>
+  <footer class="custom-footer">
+    <div class="footer-content">
+      <div class="footer-links-left">
+        <a href="#">Servicio al cliente</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="tienda.html">Tienda</a>
       </div>
-   </footer>
+      <div class="footer-center">
+        <img src="img/LogoProvisorio.png" class="footer-logo" style="width: 110px; height: 70px; "
+          alt="LogoHuertoHogar">
+      </div>
+      <div class="footer-links-right">
+        <a href="contacto.html">Contacto</a>
+        <a href="anuncio.html">Anuncios</a>
+        <a href="login.html">Cuenta</a>
+      </div>
+    </div>
+  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/Producto.js"></script>
+  <script src="js/ProductoCarrito.js"></script>
 </body>
 
 </html>
