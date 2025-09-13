@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         text: "Cuenta creada correctamente.",
         showConfirmButton: false,
         timer: 2000,
+        toast: true,
       }).then(() => {
         window.location.href = "index.html";
       });

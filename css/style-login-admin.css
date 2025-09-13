@@ -1,0 +1,41 @@
+.left-panel {
+  background: url("../img/img\ \(1\).jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.right-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 600px;
+  background-color: #f5f7fa;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.login-box h3 {
+  color: #003366;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.login-box a {
+  color: #003366;
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
