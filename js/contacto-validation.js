@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         text: `Gracias ${nombre}, tu mensaje ha sido enviado.`,
         showConfirmButton: false,
         timer: 2000,
+        toast: true,
       }).then(() => {
         form.reset(); // limpia el formulario
       });

@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         text: "Formulario válido. ¡Iniciando sesión!",
         showConfirmButton: false, // No se muestra boton de confirmacion
         timer: 2000, // temporizador en 2 segundos
+        toast: true,
       }).then(() => {
         window.location.href = "index.html"; // Lleva a index luego del temporizador
       });
