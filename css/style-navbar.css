@@ -11,12 +11,11 @@ nav.navbar {
   display: flex;
   align-items: center; /* centra verticalmente */
 }
-nav.img{
-  width: 110px; 
+nav.img {
+  width: 110px;
   height: 70px;
   margin-left: 20px;
 }
-
 
 .navbar {
   min-height: auto;
@@ -35,4 +34,9 @@ nav.img{
 nav .nav-link {
   color: white;
   font-weight: 300;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* quita salto raro */
 }

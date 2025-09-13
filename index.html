@@ -14,38 +14,53 @@
 
 <body>
    <!-- NAVBAR -->
-   <header></header>
-   <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
-         <a class="navbar-brand" href="index.html">
-            <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px; margin-left: 20px;"
-               alt="LogoHuertoHogar" />
-         </a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
+<header></header>
+<nav class="navbar navbar-expand-lg fixed-top">
+   <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+         <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px; margin-left: 20px;"
+            alt="LogoHuertoHogar" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
 
-         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                  <img  src="img/LogoProvisorio.png" style="width: 110px; height: 70px;" alt="LogoHuertoHogar" />
-               </h5>
-               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body ">
-               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                  <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
-                  <li class="nav-item"><a class="nav-link" href="anuncio.html">Anuncio</a></li>
-                  <li class="nav-item"><a class="nav-link" href="login.html">Cuenta</a></li>
-                  <li class="nav-item"><a class="nav-link" href="carrito.html"><img src="img/shoppingCart.png"
-                           alt="LinkCarrito"></a></li>
-               </ul>
-            </div>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+         <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+               <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px;" alt="LogoHuertoHogar" />
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div>
+         <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+               <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+               <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+               <li class="nav-item"><a class="nav-link" href="anuncio.html">Anuncio</a></li>
+
+               <!-- Dropdown para Cuenta -->
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="cuentaDropdown" role="button">
+                     Cuenta
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="cuentaDropdown">
+                     <li><a class="dropdown-item" href="login.html">Cliente</a></li>
+                     <li><a class="dropdown-item" href="home_admin.html">Administrador</a></li>
+                  </ul>
+               </li>
+
+               <li class="nav-item">
+                  <a class="nav-link" href="carrito.html">
+                     <img src="img/shoppingCart.png" alt="LinkCarrito">
+                  </a>
+               </li>
+            </ul>
          </div>
       </div>
-   </nav>
+   </div>
+</nav>
+
 
    <!-- Carrusel -->
    <div class="div mt">
