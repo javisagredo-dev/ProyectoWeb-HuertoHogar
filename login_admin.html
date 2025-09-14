@@ -93,14 +93,12 @@
             <h3>Login Administrador</h3>
             <form>
               <div class="mb-3">
-                <label for="email" class="form-label"
-                  >Correo institucional</label
-                >
+                <label for="email" class="form-label">Correo electrónico</label>
                 <input
                   type="email"
                   class="form-control"
                   id="txt_email"
-                  placeholder="admin@huertohogar.cl"
+                  placeholder="Ingresa tu correo"
                 />
               </div>
               <div class="mb-3">
@@ -112,7 +110,14 @@
                   placeholder="Ingresa tu contraseña"
                 />
               </div>
-              <button type="submit" class="btn btn-primary w-100 mb-3">
+              <div class="d-flex justify-content-between mb-3">
+                <div>
+                  <input type="checkbox" id="remember" />
+                  <label for="remember"> Recuérdame</label>
+                </div>
+                <a href="#">¿Olvidaste tu contraseña?</a>
+              </div>
+              <button type="submit" class="btn btn-success w-100 mb-3">
                 Entrar
               </button>
             </form>

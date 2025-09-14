@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Productos - Admin</title>
+    <link rel="stylesheet" href="assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-admin-producto.css" />
+  </head>
+  <body>
+    <!-- NAVBAR ADMIN -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Admin Panel</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#adminNavbar"
+          aria-controls="adminNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="adminNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Gestión Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gestión Usuarios</a>
+            </li>
+          </ul>
+          <span class="navbar-text">Admin</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <div class="container mt-4" id="adminContent">
+      <h2>Gestión de Productos</h2>
+
+      <!-- Tabla dinámica -->
+      <table class="table table-striped table-hover" id="tablaProductos">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se insertarán las filas dinámicamente -->
+        </tbody>
+      </table>
+
+      <button class="btn btn-success mt-3">Agregar Producto</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/Producto.js"></script>
+    <!-- primero Producto.js -->
+    <script src="js/admin-productos.js"></script>
+    <!-- luego admin-productos.js -->
+    <script src="assets/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
