@@ -1,0 +1,79 @@
+/* style-admin-usuarios.css */
+
+/* Contenedor principal */
+#adminContent {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+/* Título de sección */
+#adminContent h2 {
+  margin-bottom: 1.5rem;
+  color: #6a462d;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Tabla de usuarios */
+#tablaUsuarios {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+#tablaUsuarios th,
+#tablaUsuarios td {
+  padding: 0.75rem;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#tablaUsuarios th {
+  background-color: #6a462d;
+  color: #fff;
+}
+
+#tablaUsuarios tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Botones dentro de la tabla */
+.table-actions .btn {
+  width: 80px;
+  margin: 2px 0;
+}
+
+/* Botón agregar usuario */
+#adminContent .btn-success {
+  display: block;
+  width: 200px;
+  margin: 1rem auto 0;
+  font-weight: 600;
+}
+
+/* Scroll horizontal si la tabla es muy grande */
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* Checkbox centrado */
+#tablaUsuarios input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  #tablaUsuarios th,
+  #tablaUsuarios td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  #adminContent h2 {
+    font-size: 1.5rem;
+  }
+
+  #adminContent .btn-success {
+    width: 100%;
+  }
+}
