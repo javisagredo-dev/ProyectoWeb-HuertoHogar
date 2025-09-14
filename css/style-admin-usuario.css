@@ -1,5 +1,16 @@
 /* style-admin-usuarios.css */
 
+/* Estilo general del body con fondo */
+body {
+  background-image: url("../img/fondo_home_admin.jpg"); /* Cambia la ruta por tu imagen */
+  background-size: cover; /* La imagen cubre toda la pantalla */
+  background-position: center; /* Centrada */
+  background-repeat: no-repeat; /* No se repite */
+  background-attachment: fixed; /* Se mantiene fija al hacer scroll */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
 /* Contenedor principal */
 #adminContent {
   margin-top: 2rem;
@@ -9,8 +20,16 @@
 /* Título de sección */
 #adminContent h2 {
   margin-bottom: 1.5rem;
-  color: #6a462d;
+  color: #ffffff;
   font-weight: 700;
+  text-align: center;
+}
+
+/* Párrafos dentro del contenedor */
+#adminContent p {
+  color: #000; /* Negro */
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
@@ -29,7 +48,7 @@
 }
 
 #tablaUsuarios th {
-  background-color: #6a462d;
+  background-color: hsl(0, 0%, 34%);
   color: #fff;
 }
 
