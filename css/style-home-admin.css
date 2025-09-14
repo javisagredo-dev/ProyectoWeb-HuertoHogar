@@ -1,0 +1,99 @@
+/* style-home-admin.css */
+
+/* Fondo de imagen para todo el dashboard */
+body {
+  background-image: url("../img/fondo_home_admin.jpg"); /* Cambia la ruta por tu imagen */
+  background-size: cover; /* La imagen cubre toda la pantalla */
+  background-position: center; /* Centrada */
+  background-repeat: no-repeat; /* No se repite */
+  background-attachment: fixed; /* Se mantiene fija al hacer scroll */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+/* Contenedor principal con algo de contraste */
+.container {
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: rgba(
+    100,
+    100,
+    100,
+    0.85
+  ); /* Fondo blanco semi-transparente */
+  border-radius: 1rem;
+}
+
+/* Título y descripción */
+.container h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.container p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+/* Cards del dashboard */
+.card {
+  border-radius: 0.75rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Iconos dentro de las cards */
+.card i {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Título y texto de las cards */
+.card .card-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.card .card-text {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Botones dentro de las cards */
+.card .btn {
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.card .btn:hover {
+  background-color: #fff;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Espaciado entre las columnas */
+.row.justify-content-center > .col-md-4 {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .card i {
+    font-size: 2.5rem;
+  }
+
+  .container h2 {
+    font-size: 1.75rem;
+  }
+
+  .container p {
+    font-size: 1rem;
+  }
+}

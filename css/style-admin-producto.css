@@ -1,4 +1,13 @@
 /* style-admin-producto.css */
+body {
+  background-image: url("../img/fondo_home_admin.jpg"); /* Cambia la ruta por tu imagen */
+  background-size: cover; /* La imagen cubre toda la pantalla */
+  background-position: center; /* Centrada */
+  background-repeat: no-repeat; /* No se repite */
+  background-attachment: fixed; /* Se mantiene fija al hacer scroll */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
 
 /* Contenedor principal */
 #adminContent {
@@ -9,7 +18,7 @@
 /* Título de sección */
 #adminContent h2 {
   margin-bottom: 1.5rem;
-  color: #6a462d;
+  color: #ffffff;
   font-weight: 700;
   text-align: center;
 }
@@ -29,7 +38,7 @@
 }
 
 #tablaProductos th {
-  background-color: #6a462d;
+  background-color: hsl(0, 0%, 34%);
   color: #fff;
 }
 
