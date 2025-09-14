@@ -12,144 +12,146 @@
    <link rel="stylesheet" href="css/style-footer.css" />
 </head>
 
-<body>
+<body onload="actualizarCantidadNavBar()">
    <!-- NAVBAR -->
-<header></header>
-<nav class="navbar navbar-expand-lg fixed-top">
-   <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-         <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px; margin-left: 20px;"
-            alt="LogoHuertoHogar" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-      </button>
+   <header></header>
+   <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="index.html">
+            <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px; margin-left: 20px;"
+               alt="LogoHuertoHogar" />
+         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
 
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-               <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px;" alt="LogoHuertoHogar" />
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-         </div>
-         <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-               <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-               <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
-               <li class="nav-item"><a class="nav-link" href="anuncio.html">Anuncio</a></li>
-
-               <!-- Dropdown para Cuenta -->
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="cuentaDropdown" role="button">
-                     Cuenta
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="cuentaDropdown">
-                     <li><a class="dropdown-item" href="login.html">Cliente</a></li>
-                     <li><a class="dropdown-item" href="login_admin.html">Administrador</a></li>
-                  </ul>
-               </li>
-
-               <li class="nav-item">
-                  <a class="nav-link" href="carrito.html">
-                     <img src="img/shoppingCart.png" alt="LinkCarrito">
-                  </a>
-               </li>
-            </ul>
-         </div>
-      </div>
-   </div>
-</nav>
-
-
-   <!-- Carrusel -->
-   <div class="div mt">
-      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-         <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-               <img src="img/img (1).jpg" class="d-block w-100" alt="Productos frescos">
-               <div class="carousel-caption d-ms-block d-md-block">
-                  <h1 class="captionTCarousel">Frescura del campo a tu hogar</h1>
-                  <h5 class="captionPCarousel">Más de 6 años llevando calidad y sabor a las familias de Chile</h5>
-               </div>
+         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                  <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px;" alt="LogoHuertoHogar" />
+               </h5>
+               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
-               <img src="img/img (2).jpg" class="d-block w-100" alt="Distribución nacional">
-               <div class="carousel-caption d-ms-block d-md-block">
-                  <h1 class="captionTCarousel">Estamos cerca de ti</h1>
-                  <h5 class="captionPCarousel">Operamos en más de 9 puntos del país: Santiago, Puerto Montt, Concepción
-                     y más</h5>
-               </div>
-            </div>
-            <div class="carousel-item">
-               <img src="img/img (3).jpg" class="d-block w-100" alt="Estilo de vida saludable">
-               <div class="carousel-caption d-ms-block d-md-block">
-                  <h1 class="captionTCarousel">Vive saludable y natural</h1>
-                  <h5 class="captionPCarousel">Promovemos una alimentación consciente y productos de calidad</h5>
-               </div>
-            </div>
-            <div class="carousel-item">
-               <img src="img/img (4).jpg" class="d-block w-100" alt="HuertoHogar confianza">
-               <div class="carousel-caption d-ms-block d-md-block">
-                  <h1 class="captionTCarousel">Confianza y cercanía</h1>
-                  <h5 class="captionPCarousel">Del agricultor directo a tu mesa, con el cariño del campo chileno</h5>
-               </div>
+            <div class="offcanvas-body ">
+               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                  <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+                  <li class="nav-item"><a class="nav-link" href="anuncio.html">Anuncio</a></li>
+                  <!-- Dropdown para Cuenta -->
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="cuentaDropdown" role="button">
+                        Cuenta
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="cuentaDropdown">
+                        <li><a class="dropdown-item" href="login.html">Cliente</a></li>
+                        <li><a class="dropdown-item" href="login_admin.html">Administrador</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="carrito.html">
+                        <img src="img/shoppingCart.png" alt="LinkCarrito">
+                        <span id="cantidad-carrito" class="badge bg-success">0</span>
+                     </a>
+                  </li>
+               </ul>
             </div>
          </div>
       </div>
-
-
-
-      <!-- Botones carrusel -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-         data-bs-slide="prev">
-         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-         <span class="visually-hidden">Anterior</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-         data-bs-slide="next">
-         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-         <span class="visually-hidden">Siguiente</span>
-      </button>
-   </div>
-   </div>
-
-   <!-- Seccion texto chido con plantas -->
-   <div class="container">
-      <div class="row">
-
-         <!-- Planta vertical1 -->
-         <div class="col-lg-4 d-none d-lg-block text-center "> <img src="img/img_planta_vertical.png"
-               style="max-width: 400px;" alt="planta_vertical1" class="d-none d-lg-block"></div>
-
-         <!-- Texto -->
-         <div class="col-md-12 col-lg-4 text-center mt-5 mb-5 mb-lg-0">
-            <h1 class="texto-T-Negro">Quienes somos</h1>
-            <h5 class="texto-P-Negro">
-               Somos una tienda online de frutas y verduras orgánicas y naturales, con una amplia línea de despensa
-               pensada en ti, donde podrás encontrar los más variados productos que van desde huevos hasta detergentes
-               ecológicos. Además de ello, esta nuestra nueva línea eco-friendly donde puedes hallar desde bombillas que
-               salvan al planeta hasta productos de cuidado personal.
-            </h5>
+   </nav>
+   <main>
+      <!-- Carrusel -->
+      <div class="div mt">
+         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active" data-bs-interval="10000">
+                  <img src="img/img (1).jpg" class="d-block w-100" alt="Productos frescos">
+                  <div class="carousel-caption d-ms-block d-md-block">
+                     <h1 class="captionTCarousel">Frescura del campo a tu hogar</h1>
+                     <h5 class="captionPCarousel">Más de 6 años llevando calidad y sabor a las familias de Chile</h5>
+                  </div>
+               </div>
+               <div class="carousel-item" data-bs-interval="2000">
+                  <img src="img/img (2).jpg" class="d-block w-100" alt="Distribución nacional">
+                  <div class="carousel-caption d-ms-block d-md-block">
+                     <h1 class="captionTCarousel">Estamos cerca de ti</h1>
+                     <h5 class="captionPCarousel">Operamos en más de 9 puntos del país: Santiago, Puerto Montt,
+                        Concepción
+                        y más</h5>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img src="img/img (3).jpg" class="d-block w-100" alt="Estilo de vida saludable">
+                  <div class="carousel-caption d-ms-block d-md-block">
+                     <h1 class="captionTCarousel">Vive saludable y natural</h1>
+                     <h5 class="captionPCarousel">Promovemos una alimentación consciente y productos de calidad</h5>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img src="img/img (4).jpg" class="d-block w-100" alt="HuertoHogar confianza">
+                  <div class="carousel-caption d-ms-block d-md-block">
+                     <h1 class="captionTCarousel">Confianza y cercanía</h1>
+                     <h5 class="captionPCarousel">Del agricultor directo a tu mesa, con el cariño del campo chileno</h5>
+                  </div>
+               </div>
+            </div>
          </div>
 
 
-         <!-- Planta vertical 2 -->
-         <div class="col-lg-4 d-none d-lg-block text-center "> <img src="img/img_planta_vertical.png"
-               style="max-width: 400px;" alt="planta_vertical2" class="d-none d-lg-block"></div>
+
+         <!-- Botones carrusel -->
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+         </button>
       </div>
-   </div>
+      </div>
+
+      <!-- Seccion texto chido con plantas -->
+      <div class="container">
+         <div class="row">
+
+            <!-- Planta vertical1 -->
+            <div class="col-lg-4 d-none d-lg-block text-center "> <img src="img/img_planta_vertical.png"
+                  style="max-width: 400px;" alt="planta_vertical1" class="d-none d-lg-block"></div>
+
+            <!-- Texto -->
+            <div class="col-md-12 col-lg-4 text-center mt-5 mb-5 mb-lg-0">
+               <h1 class="texto-T-Negro">Quienes somos</h1>
+               <h5 class="texto-P-Negro">
+                  Somos una tienda online de frutas y verduras orgánicas y naturales, con una amplia línea de despensa
+                  pensada en ti, donde podrás encontrar los más variados productos que van desde huevos hasta
+                  detergentes
+                  ecológicos. Además de ello, esta nuestra nueva línea eco-friendly donde puedes hallar desde bombillas
+                  que
+                  salvan al planeta hasta productos de cuidado personal.
+               </h5>
+            </div>
+
+
+            <!-- Planta vertical 2 -->
+            <div class="col-lg-4 d-none d-lg-block text-center "> <img src="img/img_planta_vertical.png"
+                  style="max-width: 400px;" alt="planta_vertical2" class="d-none d-lg-block"></div>
+         </div>
+      </div>
+   </main>
 
    <!--  FOOTER  -->
    <footer class="custom-footer">
       <div class="footer-content">
          <div class="footer-links-left">
-            <a href="#">Servicio al cliente</a>
+            <a href="nosotros.html">Ubicación</a>
             <a href="nosotros.html">Nosotros</a>
             <a href="tienda.html">Tienda</a>
          </div>
          <div class="footer-center">
-            <img src="img/LogoProvisorio.png" class="footer-logo" style="width: 110px; height: 70px; "alt="LogoHuertoHogar">
+            <img src="img/LogoProvisorio.png" class="footer-logo" style="width: 110px; height: 70px; "
+               alt="LogoHuertoHogar">
          </div>
          <div class="footer-links-right">
             <a href="contacto.html">Contacto</a>
@@ -160,9 +162,8 @@
    </footer>
 
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="js/ProductoCarrito.js"></script>
 </body>
 
 </html>

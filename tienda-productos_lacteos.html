@@ -67,7 +67,16 @@
             <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
             <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
             <li class="nav-item"><a class="nav-link" href="anuncio.html">Anuncio</a></li>
-            <li class="nav-item"><a class="nav-link" href="login.html">Cuenta</a></li>
+            <!-- Dropdown para Cuenta -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="cuentaDropdown" role="button">
+                Cuenta
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="cuentaDropdown">
+                <li><a class="dropdown-item" href="login.html">Cliente</a></li>
+                <li><a class="dropdown-item" href="login_admin.html">Administrador</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="carrito.html">
                 <img src="img/shoppingCart.png" alt="LinkCarrito">
                 <span id="cantidad-carrito" class="badge bg-success">0</span>
@@ -78,84 +87,89 @@
       </div>
     </div>
   </nav>
-  <!-- HERO BANNER-->
-  <div class="hero-banner" style="background-image: url(img/img\ \(1\).jpg);">
-    <div class="hero-content mt-5">
-      <h3 class="mb-3">TIENDA ONLINE</h3>
-      <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua.</p>
-      <small class="hero-subtitle">Aplican términos y condiciones</small>
-    </div>
-  </div>
 
-  <!-- SECCIÓN PRINCIPAL -->
-  <div class="container-fluid p-0">
-    <div class="row g-0">
-      <!-- SIDEBAR -->
-      <div class="col-12 col-md-3 col-lg-2">
-        <aside class="bg-light sidebar-panel p-3">
-          <div class="sidebar-header d-flex d-md-none justify-content-between align-items-center mb-2">
-            <strong class="m-0">Categorías</strong>
-            <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse"
-              data-bs-target="#filterContent" aria-expanded="false" aria-controls="filterContent">▼</button>
-          </div>
-          <div class="collapse d-md-block" id="filterContent">
-            <h5 class="mb-2 d-flex justify-content-between align-items-center category-title d-none d-md-flex">
-              Categorias
-            </h5>
-            <ul>
-              <li class="mb-2"><a href="tienda.html" class="text-decoration-none text-dark">Sin filtrar</a></li>
-              <li class="mb-2"><a href="tienda-frutas_frescas.html" class="text-decoration-none text-dark">Frutas
-                  Frescas</a></li>
-              <li class="mb-2"><a href="tienda-verduras_organicas.html" class="text-decoration-none text-dark">Verduras
-                  Orgánicas</a></li>
-              <li class="mb-2"><a href="tienda-productos_organicos.html"
-                  class="text-decoration-none text-dark">Productos Orgánicos</a></li>
-              <li class="mb-2"><a href="tienda-productos_lacteos.html" class="text-decoration-none text-dark">Productos
-                  Lácteos</a></li>
-            </ul>
-          </div>
-        </aside>
+  <main>
+    <!-- HERO BANNER-->
+    <div class="hero-banner" style="background-image: url(img/img\ \(1\).jpg);">
+      <div class="hero-content mt-5">
+        <h3 class="mb-3">TIENDA ONLINE</h3>
+        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua.</p>
+        <small class="hero-subtitle">Aplican términos y condiciones</small>
       </div>
+    </div>
 
-      <!-- PRODUCTOS -->
-      <div class="col-sm-12 col-sm-8 col-md-9 col-lg-10">
-        <div class="p-3">
-          <div class="d-flex flex-wrap gap-3 justify-content-start">
-
-            <!-- Producto 1 -->
-            <div class="product-card card">
-              <img src="img/leche_entera.png" class="card-img-top product-image" alt="leche_entera" />
-              <div class="card-body">
-                <h6 class="card-title">Leche Entera</h6>
-                <p class="fw-bold text-success mb-0">$2.000 CLP/kg</p>
-              </div>
-              <div
-                class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center product-overlay">
-                <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto"
-                  onclick="abrirModalProducto('PL001')">
-                  Ver Producto
-                </button>
-
-                <button class="btn btn-success" onclick="agregarCarrito('PL001')">
-                  Añadir al Carro
-                  <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
-                </button>
-              </div>
+    <!-- SECCIÓN PRINCIPAL -->
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <!-- SIDEBAR -->
+        <div class="col-12 col-md-3 col-lg-2">
+          <aside class="bg-light sidebar-panel p-3">
+            <div class="sidebar-header d-flex d-md-none justify-content-between align-items-center mb-2">
+              <strong class="m-0">Categorías</strong>
+              <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#filterContent" aria-expanded="false" aria-controls="filterContent">▼</button>
             </div>
+            <div class="collapse d-md-block" id="filterContent">
+              <h5 class="mb-2 d-flex justify-content-between align-items-center category-title d-none d-md-flex">
+                Categorias
+              </h5>
+              <ul>
+                <li class="mb-2"><a href="tienda.html" class="text-decoration-none text-dark">Sin filtrar</a></li>
+                <li class="mb-2"><a href="tienda-frutas_frescas.html" class="text-decoration-none text-dark">Frutas
+                    Frescas</a></li>
+                <li class="mb-2"><a href="tienda-verduras_organicas.html"
+                    class="text-decoration-none text-dark">Verduras
+                    Orgánicas</a></li>
+                <li class="mb-2"><a href="tienda-productos_organicos.html"
+                    class="text-decoration-none text-dark">Productos Orgánicos</a></li>
+                <li class="mb-2"><a href="tienda-productos_lacteos.html"
+                    class="text-decoration-none text-dark">Productos
+                    Lácteos</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
 
+        <!-- PRODUCTOS -->
+        <div class="col-sm-12 col-sm-8 col-md-9 col-lg-10">
+          <div class="p-3">
+            <div class="d-flex flex-wrap gap-3 justify-content-start">
+
+              <!-- Producto 1 -->
+              <div class="product-card card">
+                <img src="img/leche_entera.png" class="card-img-top product-image" alt="leche_entera" />
+                <div class="card-body">
+                  <h6 class="card-title">Leche Entera</h6>
+                  <p class="fw-bold text-success mb-0">$2.000 CLP/kg</p>
+                </div>
+                <div
+                  class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center product-overlay">
+                  <button class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                    onclick="abrirModalProducto('PL001')">
+                    Ver Producto
+                  </button>
+
+                  <button class="btn btn-success" onclick="agregarCarrito('PL001')">
+                    Añadir al Carro
+                    <img src="img/addToCart.png" alt="IconoCarrito" style="width: 20px; height: 20px;">
+                  </button>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
+  </main>
 
   <!--  FOOTER  -->
   <footer class="custom-footer">
     <div class="footer-content">
       <div class="footer-links-left">
-        <a href="#">Servicio al cliente</a>
+        <a href="nosotros.html">Ubicación</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="tienda.html">Tienda</a>
       </div>
