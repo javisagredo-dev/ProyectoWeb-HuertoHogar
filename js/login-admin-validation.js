@@ -14,9 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!email) {
       errors.push("El correo es obligatorio.");
     } else {
-      const emailRegex = /^[\w._%+-]+@huertohogar\.cl$/;
+      const emailRegex =
+        /^[\w._%+-]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/;
       if (!emailRegex.test(email)) {
-        errors.push("El correo debe ser institucional @huertohogar.cl");
+        errors.push(
+          "El correo debe ser @duoc.cl, @profesor.duoc.cl o @gmail.com."
+        );
       }
     }
 

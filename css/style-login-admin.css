@@ -18,21 +18,21 @@
 .login-box {
   width: 100%;
   max-width: 600px;
-  background-color: #f5f7fa;
+  background-color: #eeeeee;
   border-radius: 12px;
   padding: 3rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .login-box h3 {
-  color: #003366;
+  color: #6a462d;
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .login-box a {
-  color: #003366;
+  color: #6a462d;
   text-decoration: none;
 }
 
