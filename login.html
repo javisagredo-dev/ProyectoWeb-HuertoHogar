@@ -17,7 +17,8 @@
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
-        <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px; margin-left: 20px" alt="LogoHuertoHogar" />
+        <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px; margin-left: 20px;"
+          alt="LogoHuertoHogar" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -27,74 +28,75 @@
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-            <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px" alt="LogoHuertoHogar" />
+            <img src="img/LogoProvisorio.png" style="width: 110px; height: 70px;" alt="LogoHuertoHogar" />
           </h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body ">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link" href="nosotros.html">Nosotros</a>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+            <li class="nav-item"><a class="nav-link" href="anuncio.html">Anuncio</a></li>
+            <!-- Dropdown para Cuenta -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="cuentaDropdown" role="button">
+                Cuenta
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="cuentaDropdown">
+                <li><a class="dropdown-item" href="login.html">Cliente</a></li>
+                <li><a class="dropdown-item" href="login_admin.html">Administrador</a></li>
+              </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tienda.html">Tienda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="anuncio.html">Anuncio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Cuenta</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="carrito.html"><img src="img/shoppingCart.png" alt="LinkCarrito" /></a>
+            <li class="nav-item"><a class="nav-link" href="carrito.html">
+                <img src="img/shoppingCart.png" alt="LinkCarrito">
+                <span id="cantidad-carrito" class="badge bg-success">0</span>
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
   </nav>
-  <main>
-    <!-- LOGIN SPLIT -->
-    <div class="container-fluid h-100">
-      <div class="row h-100">
-        <!-- MITAD IZQUIERDA -->
-        <div class="col-md-6 left-panel">
-          <h2>Bienvenido a HuertoHogar</h2>
-          <p>Conéctate y cuida tu huerto con nosotros 🌱</p>
-        </div>
+  <!-- LOGIN SPLIT -->
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <!-- MITAD IZQUIERDA -->
+      <div class="col-md-6 left-panel">
+        <h2>Bienvenido a HuertoHogar</h2>
+        <p>Conéctate y cuida tu huerto con nosotros 🌱</p>
+      </div>
 
-        <!-- MITAD DERECHA -->
-        <div class="col-md-6 right-panel">
-          <div class="login-box">
-            <h3>Inicia Sesión</h3>
-            <form>
-              <div class="mb-3">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="txt_email" placeholder="Ingresa tu correo" />
+      <!-- MITAD DERECHA -->
+      <div class="col-md-6 right-panel">
+        <div class="login-box">
+          <h3>Inicia Sesión</h3>
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="txt_email" placeholder="Ingresa tu correo" />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="txt_password" placeholder="Ingresa tu contraseña" />
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+              <div>
+                <input type="checkbox" id="remember" />
+                <label for="remember"> Recuérdame</label>
               </div>
-              <div class="mb-3">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="txt_password" placeholder="Ingresa tu contraseña" />
-              </div>
-              <div class="d-flex justify-content-between mb-3">
-                <div>
-                  <input type="checkbox" id="remember" />
-                  <label for="remember"> Recuérdame</label>
-                </div>
-                <a href="#">¿Olvidaste tu contraseña?</a>
-              </div>
-              <button type="submit" class="btn btn-success w-100 mb-3">
-                Entrar
-              </button>
-              <p class="text-center mt-3">
-                ¿No tienes cuenta? <a href="cuenta.html">Regístrate</a>
-              </p>
-            </form>
-          </div>
+              <a href="#">¿Olvidaste tu contraseña?</a>
+            </div>
+            <button type="submit" class="btn btn-success w-100 mb-3">
+              Entrar
+            </button>
+            <p class="text-center mt-3">
+              ¿No tienes cuenta? <a href="cuenta.html">Regístrate</a>
+            </p>
+          </form>
         </div>
       </div>
     </div>
-  </main>
+  </div>
 
   <script src="assets/bootstrap.bundle.min.js"></script>
   <script src="js/login-validation.js"></script>
