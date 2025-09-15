@@ -1,4 +1,4 @@
-/*  FOOTER STYLE  */
+/*  FOOTER */
 footer {
   display: flexbox;
 }
@@ -40,7 +40,7 @@ footer {
   height: 50px;
 }
 
-/* Responsividad del footr */
+/* RESPONSIVIDAD DEL FOOTR */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;

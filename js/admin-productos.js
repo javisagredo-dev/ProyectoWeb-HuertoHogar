@@ -2,18 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const tbody = document.querySelector("#tablaProductos tbody");
   const btnAgregar = document.querySelector(".btn-success");
 
-  // Obtener listaProductos desde localStorage o usar la global si no existe
   let listaProductos =
     JSON.parse(localStorage.getItem("listaProductos")) ||
     window.listaProductos ||
     [];
 
-  // Función para actualizar localStorage
   function guardarLocalStorage() {
     localStorage.setItem("listaProductos", JSON.stringify(listaProductos));
   }
 
-  // Función para renderizar productos
+
   function renderProductos() {
     tbody.innerHTML = "";
 
@@ -34,16 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
       tbody.appendChild(tr);
 
-      // Botón Eliminar
+
       tr.querySelector(".btn-eliminar").addEventListener("click", () => {
         if (confirm(`¿Eliminar el producto "${producto.nombre}"?`)) {
-          listaProductos.splice(index, 1); // elimina del array
-          guardarLocalStorage(); // guarda en localStorage
-          renderProductos(); // vuelve a renderizar tabla
+          listaProductos.splice(index, 1); 
+          guardarLocalStorage(); 
+          renderProductos();
         }
       });
 
-      // Botón Editar
+  
       tr.querySelector(".btn-editar").addEventListener("click", () => {
         if (tbody.querySelector(".edit-row")) return;
 
@@ -62,12 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         tr.after(editTr);
 
-        // Cancelar edición
+
         editTr.querySelector(".btn-cancelar").addEventListener("click", () => {
           editTr.remove();
         });
 
-        // Guardar edición
         editTr.querySelector(".btn-guardar").addEventListener("click", () => {
           const nombreInput = editTr.children[1]
             .querySelector("input")
@@ -91,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
           }
 
-          // Actualizar producto en array
           producto.nombre = nombreInput;
           producto.precio = Number(precioInput);
           producto.imagen = imagenInput;
@@ -104,10 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Render inicial
   renderProductos();
 
-  // Agregar nuevo producto
+
   btnAgregar.addEventListener("click", () => {
     if (document.querySelector("#tablaProductos tbody tr.new-product")) return;
 

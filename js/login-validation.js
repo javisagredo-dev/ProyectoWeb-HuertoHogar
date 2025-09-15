@@ -1,4 +1,3 @@
-// Espera a que el DOM esté cargado antes de ejecutar el script
 document.addEventListener("DOMContentLoaded", () => {
   // Obtiene el formulario dentro de la caja de login
   const form = document.querySelector(".login-box form");
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ================= VALIDACIÓN DE CORREO =================
     if (!email) {
-      // Si el correo está vacío
+
       errors.push("El correo es obligatorio.");
     } else if (email.length > 100) {
       // Si supera los 100 caracteres

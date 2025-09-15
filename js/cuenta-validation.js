@@ -1,16 +1,13 @@
-// Espera a que el DOM esté cargado antes de ejecutar el script
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Obtiene el formulario dentro de la caja de registro
   const form = document.querySelector(".login-box form");
   const nombreInput = document.getElementById("nombre");
   const apellidoInput = document.getElementById("apellido");
   const emailInput = document.getElementById("email");
   const passwordInput = document.getElementById("password");
 
-  // Array simulado de correos ya registrados (solo para pruebas)
   const correosExistentes = ["test@duoc.cl", "admin@gmail.com"];
 
-  // Escucha el evento "submit" del formulario
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 

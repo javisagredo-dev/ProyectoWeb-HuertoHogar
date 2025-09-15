@@ -2,21 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const tbody = document.querySelector("#tablaUsuarios tbody");
   const btnAgregar = document.querySelector(".btn-success");
 
-  // Obtener listaUsuarios desde localStorage o usar la global si no existe
   let listaUsuarios =
     JSON.parse(localStorage.getItem("listaUsuarios")) ||
     window.listaUsuarios ||
     [];
 
-  // Regex para validar correo
   const emailRegex = /^[\w._%+-]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/;
 
-  // Función para actualizar localStorage
   function guardarLocalStorage() {
     localStorage.setItem("listaUsuarios", JSON.stringify(listaUsuarios));
   }
 
-  // Función para renderizar usuarios
   function renderUsuarios() {
     tbody.innerHTML = "";
 
@@ -35,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
       tbody.appendChild(tr);
 
-      // Botón Eliminar
       tr.querySelector(".btn-eliminar").addEventListener("click", () => {
         if (confirm(`¿Eliminar el usuario "${usuario.nombre}"?`)) {
           listaUsuarios.splice(index, 1);
@@ -44,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      // Botón Editar
       tr.querySelector(".btn-editar").addEventListener("click", () => {
         if (tbody.querySelector(".edit-row")) return;
 
@@ -75,12 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         tr.after(editTr);
 
-        // Cancelar edición
         editTr.querySelector(".btn-cancelar").addEventListener("click", () => {
           editTr.remove();
         });
 
-        // Guardar edición
         editTr.querySelector(".btn-guardar").addEventListener("click", () => {
           const nombreInput = editTr.children[1]
             .querySelector("input")
@@ -116,10 +108,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Render inicial
   renderUsuarios();
 
-  // Agregar nuevo usuario
   btnAgregar.addEventListener("click", () => {
     if (document.querySelector("#tablaUsuarios tbody tr.new-user")) return;
 
