@@ -40,5 +40,7 @@ function actualizarCantidadNavbar() {
     const totalItems = carrito.reduce((acumulador, item) => acumulador + item.cantidad, 0);
 
     const badge = document.getElementById("cantidad-carrito");
-    if (badge) badge.textContent = totalItems;
+    if (badge) {
+        badge.textContent = totalItems;
+    }
 }
