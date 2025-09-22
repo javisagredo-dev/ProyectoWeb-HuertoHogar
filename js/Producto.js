@@ -15,7 +15,7 @@ class Producto {
     document.querySelector(".modal-producto-desc").textContent = this.descripcion;
 
     const botonModal = document.querySelector(".btn-agregar-carrito");
-    botonModal.setAttribute("onclick", `agregarCarrito('${this.id}')`);
+    botonModal.setAttribute("onclick", "agregarCarrito(this.id)");
   }
 }
 
